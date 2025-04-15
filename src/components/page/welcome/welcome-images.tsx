@@ -16,7 +16,7 @@ const WelcomeImage = () => {
       <MyImage
         className=" w-full h-96 "
         classname="rounded-3xl"
-        src={"https://img.freepik.com/premium-photo/close-up-red-clothes-chair_1048944-29392761.jpg?w=996"}
+        src={"https://img.freepik.com/free-photo/people-enjoying-burnt-orange-wedding_52683-121737.jpg?t=st=1744707634~exp=1744711234~hmac=47e47f0cb9109d2e06c0e36a49285b0b19e7714f189e0a8401d427932dd5007c&w=996"}
       />
       <div className="">
         <div className=" space-y-2">
