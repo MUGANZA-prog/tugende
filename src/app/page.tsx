@@ -15,11 +15,11 @@ const WelcomePage = async ( ) => {
           <h1 className=" text-2xl">
             Welcome to {" "}
             <span className=" font-medium font-mono leading-1">
-              space-together
+              TUGENDE
             </span>
           </h1>
           <p className="">
-            Study smarter, collaborate better, manage easier — start now!
+            Plan your ceremony, collaborate better, manage easier — start now!
           </p>
         </div>
         <div className=" mt-8 justify-center items-center flex">
@@ -28,7 +28,7 @@ const WelcomePage = async ( ) => {
         <div className="mt-8  space-y-2">
           <div className=" text-center">
             <p>
-              By continuing you agree to <span>space together</span>{" "}
+              By continuing you agree to <span>Tugende</span>{" "}
               <MyLink href="/">Terms and Conditions</MyLink>
             </p>
           </div>

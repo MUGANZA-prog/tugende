@@ -6,46 +6,46 @@ const WelcomeImage = () => {
     <div className=" w-full h-full bg-gradient-to-tr from-base-100 to-base-300 rounded-3xl p-4 px-6 space-y-4">
       <div className=" space-y-2">
         <h2 className=" font-semibold text-4xl">
-          Start learning wherever you are.
+          Plan your ceremony whenever you are.
         </h2>
         <p className=" ">
-          Access your lessons, connect with your class, and stay organized —
-          whether you&apos;re at home, at school, or on the go.
+          plan your ceremony, connect with your guests, and stay organized —
+          whether you&apos;re at home, at work, or on the go.
         </p>
       </div>
       <MyImage
         className=" w-full h-96 "
         classname="rounded-3xl"
-        src={"https://img.freepik.com/free-photo/happy-black-father-children-having-video-call-laptop-home_637285-10589.jpg?uid=R104131663&ga=GA1.1.136419951.1706506037&w=740"}
+        src={"https://img.freepik.com/premium-photo/close-up-red-clothes-chair_1048944-29392761.jpg?w=996"}
       />
       <div className="">
         <div className=" space-y-2">
-          <h3 className=" font-semibold">Envetations</h3>
+          <h3 className=" font-semibold">Invitations</h3>
           <div className=" flex flex-row space-x-2">
             <Button role="button" variant={"ghost"}>
               <MyImage
-                src="https://cdn-icons-png.flaticon.com/512/5331/5331750.png"
+                src="https://cdn-icons-png.flaticon.com/128/12717/12717080.png"
                 role="ICON"
               />{" "}
               Wedding
             </Button>
             <Button role="button" variant={"ghost"}>
               <MyImage
-                src="https://cdn-icons-png.flaticon.com/512/17359/17359911.png"
+                src="https://cdn-icons-png.flaticon.com/128/9324/9324801.png"
                 role="ICON"
               />{" "}
-              Bithday
+              Birthday
             </Button>
             <Button role="button" variant={"ghost"}>
               <MyImage
-                src="https://cdn-icons-png.flaticon.com/128/1785/1785348.png"
+                src="https://cdn-icons-png.flaticon.com/128/17174/17174766.png"
                 role="ICON"
               />{" "}
-              gradiwition
+              Graduation
             </Button>
             <Button role="button" variant={"ghost"}>
               <MyImage
-                src="https://cdn-icons-png.flaticon.com/512/10337/10337470.png"
+                src="https://cdn-icons-png.flaticon.com/128/10337/10337470.png"
                 role="ICON"
               />{" "}
               Etc..
