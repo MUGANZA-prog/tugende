@@ -13,7 +13,6 @@ const AuthButton = () => {
         />
         Continue with Google
       </Button>
-      <p className=" flex text-center justify-center">Or user your email</p>
     </div>
   );
 };
