@@ -9,7 +9,7 @@ const WelcomePage = async ( ) => {
     <section className=" flex justify-between w-full h-screen bg-base-100">
       <div className=" w-1/2 p-8">
         <div className="  flex flex-col space-y-6 justify-center items-center">
-          <MyImage className=" size-16" src="/logo.png" />
+          <MyImage className=" size-20 object-contain" src="/logo.png" />
         </div>
         <div className=" mt-10 flex flex-col justify-center items-center space-y-1">
           <h1 className=" text-2xl">
