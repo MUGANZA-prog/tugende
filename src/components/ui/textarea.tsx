@@ -15,4 +15,11 @@ function Textarea({ className, ...props }: React.ComponentProps<"textarea">) {
   )
 }
 
+export interface TextareaProps
+  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
+
+
+
+Textarea.displayName = "Textarea"
+
 export { Textarea }
