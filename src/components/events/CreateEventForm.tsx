@@ -123,7 +123,7 @@ const CreateEventForm: React.FC = () => {
               <Label htmlFor="type">Event Type</Label>
               <Select
                 value={formData.type}
-                onValueChange={(value) => handleSelectChange("type", value)}
+                onValueChange={(value:any) => handleSelectChange("type", value)}
                 required
               >
                 <SelectTrigger id="type">
