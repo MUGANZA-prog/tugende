@@ -78,6 +78,14 @@ export function AppSidebar() {
               </CollapsibleContent>
             </SidebarMenuItem>
           </Collapsible>
+          <SidebarMenuItem>
+            <SidebarMenuButton asChild>
+              <a href="#">
+                <Eye />
+                <span className="font-semibold">requests</span>
+              </a>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
         </SidebarMenu>
       </SidebarContent>
       <SidebarFooter>
