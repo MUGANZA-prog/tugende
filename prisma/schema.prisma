@@ -20,12 +20,18 @@ generator client {
   // previewFeatures        = ["dataProxy"]
 }
 
+enum UserRole {
+  USER
+  ADMIN
+}
+
 model User {
   id            String          @id @default(auto()) @map("_id") @db.ObjectId
   name          String?
   email         String?         @unique
   emailVerified DateTime?
   image         String?
+  userRole      UserRole?       @default(USER)
   accounts      Account[]
   sessions      Session[]
   // Optional for WebAuthn support
@@ -33,6 +39,8 @@ model User {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  Event Event[]
 }
 
 model Account {
@@ -91,4 +99,31 @@ model Authenticator {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, credentialID])
+}
+
+type Address {
+  country      String?
+  province     String?
+  district     String?
+  sector       String?
+  cell         String?
+  village      String?
+  state        String?
+  postalCode   String?
+  googleMapUrl String?
+}
+
+// event
+model Event {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  ownerId     String    @db.ObjectId
+  name        String
+  description String
+  image       String?
+  address     Address?
+  startOn     DateTime?
+  EndOn       DateTime?
+  user        User      @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
 }
