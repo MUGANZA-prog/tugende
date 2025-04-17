@@ -3,8 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useToast } from '@/components/ui/use-toast';
 import { Calendar, Plus } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import EventCard, { Event } from './EventCard';
+import Link from 'next/link';
 
 // Sample data for events
 const sampleEvents: Event[] = [
@@ -85,7 +85,7 @@ const Dashboard: React.FC = () => {
           <h1 className="text-3xl font-extrabold font-serif text-green-900">Your Events</h1>
           <p className="text-gray-700 mt-1">Manage all your celebrations in one place</p>
         </div>
-        <Link to="/create-event">
+        <Link href="/create-event">
           <Button className="mt-4 sm:mt-0 bg-emerald-600 hover:bg-emerald-700">
             <Plus className="mr-2 h-4 w-4" />
             Create Events
@@ -117,7 +117,7 @@ const Dashboard: React.FC = () => {
                   ? "Nturategura ibikorwa na kimwe."
                   : `Nta bikorwa biri muri: ${activeTab}.`}
               </p>
-              <Link to="/create-event">
+              <Link href="/create-event">
                 <Button className="mt-6 bg-emerald-600 hover:bg-emerald-700">
                   <Plus className="mr-2 h-4 w-4" />
                   Tangira n'Icya Mbere
