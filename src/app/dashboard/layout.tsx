@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar"
+import { SidebarProvider, } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/sidebar/appSidebar"
 import { Navbar } from "@/components/navbar/navbar"
 
