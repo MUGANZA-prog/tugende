@@ -1,0 +1,143 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Calendar, MapPin, Users } from "lucide-react";
+import Link from "next/link";
+
+// This simulates fetching data for events (In a real app, this could be API data)
+const eventsList = [
+  {
+    id: "1",
+    title: "Summer Garden Wedding",
+    type: "Wedding",
+    date: "June 12, 2025",
+    location: "Botanical Gardens",
+    guests: "150 guests",
+    image:
+      "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    color: "bg-rwandan-green",
+  },
+  {
+    id: "2",
+    title: "Tech Graduation Party",
+    type: "Graduation",
+    date: "May 20, 2025",
+    location: "City University",
+    guests: "75 guests",
+    image:
+      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    color: "bg-rwandan-yellow",
+  },
+  {
+    id: "3",
+    title: "25th Anniversary Celebration",
+    type: "Anniversary",
+    date: "September 5, 2025",
+    location: "Grand Hotel",
+    guests: "100 guests",
+    image:
+      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    color: "bg-rwandan-red",
+  },
+  {
+    id: "4",
+    title: "Corporate Annual Meetup",
+    type: "Corporate",
+    date: "August 15, 2025",
+    location: "Kigali Convention Center",
+    guests: "200 guests",
+    image:
+      "https://plus.unsplash.com/premium_photo-1726804803868-955dfc978e2f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Q29ycG9yYXRlJTIwQW5udWFsJTIwTWVldHVwfGVufDB8fDB8fHww",
+    color: "bg-rwandan-yellow",
+  },
+  {
+    id: "5",
+    title: "Art Gala Exhibition",
+    type: "Art",
+    date: "October 1, 2025",
+    location: "Kigali Art Gallery",
+    guests: "300 guests",
+    image:
+      "https://images.unsplash.com/photo-1572947650440-e8a97ef053b2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEFydCUyMEdhbGElMjBFeGhpYml0aW9ufGVufDB8fDB8fHww",
+    color: "bbg-rwandan-green",
+  },
+  {
+    id: "6",
+    title: "Rwandan Cultural Festival",
+    type: "Cultural",
+    date: "November 20, 2025",
+    location: "Rwanda National Stadium",
+    guests: "500 guests",
+    image:
+      "https://images.unsplash.com/photo-1649523724085-8394f44a4504?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFtYWhvcm8lMjBOYXRpb25hbCUyMFN0YWRpdW18ZW58MHx8MHx8fDA%3D",
+    color: "bg-rwandan-blue",
+  },
+  {
+    id: "7",
+    title: "Charity Gala Dinner",
+    type: "Charity",
+    date: "December 12, 2025",
+    location: "Rwanda Convention Center",
+    guests: "400 guests",
+    image:
+      "https://images.unsplash.com/photo-1579518874869-1ad294d2596f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UndhbmRhJTIwQ29udmVudGlvbiUyMENlbnRlcnxlbnwwfHwwfHx8MA%3D%3D",
+    color: "bg-rwandan-yellow",
+  },
+  // Add more events as needed
+];
+
+const EventsPage = () => {
+  return (
+    <main className="min-h-screen px-4 py-16 sm:px-8 bg-white text-gray-900">
+      <h1 className="text-4xl font-bold text-center mb-12">Upcoming Events</h1>
+
+      <div className="max-w-5xl mx-auto grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        {eventsList.map((event) => (
+          <div
+            key={event.id}
+            className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+          >
+            <div className="h-48 overflow-hidden">
+              <img
+                src={event.image}
+                alt={event.title}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className={`${event.color} px-4 py-2`}>
+              <span className="text-sm font-medium text-white">{event.type}</span>
+            </div>
+            <div className="p-5">
+              <h3 className="font-serif text-xl font-semibold text-gray-900 mb-3">
+                {event.title}
+              </h3>
+              <div className="space-y-2 mb-4">
+                <div className="flex items-center gap-2 text-gray-600">
+                  <Calendar size={16} className="text-rwandan-accent" />
+                  <span>{event.date}</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <MapPin size={16} className="text-rwandan-accent" />
+                  <span>{event.location}</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <Users size={16} className="text-rwandan-accent" />
+                  <span>{event.guests}</span>
+                </div>
+              </div>
+              <Link href={`/events/${event.id}`}>
+                <Button
+                  variant="outline"
+                  className="w-full border-rwandan-accent text-rwandan-accent hover:bg-rwandan-light-green"
+                >
+                  View Details
+                </Button>
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+    </main>
+  );
+};
+
+export default EventsPage;
