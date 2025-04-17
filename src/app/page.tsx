@@ -4,9 +4,8 @@ import MyLink from "@/components/myComponents/myLink";
 import WelcomeImage from "@/components/page/welcome/welcome-images";
 
 const WelcomePage = async ( ) => {
-
   return (
-    <section className=" flex justify-between w-full h-screen bg-base-100">
+    <section className=" flex justify-between w-full h-screen bg-base-100 items-center">
       <div className=" w-1/2 p-8">
         <div className="  flex flex-col space-y-6 justify-center items-center">
           <MyImage className=" size-20 object-contain" src="/logo.png" />
