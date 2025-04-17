@@ -2,9 +2,9 @@
 import { signIn } from "@/auth";
 
 export const loginWithProvidesService = async (
-  provide: "google" | "github",
+  provide: "google",
 ) => {
   await signIn(provide, {
-    redirectTo: "Dashboard",
+    redirectTo: "/dashboard",
   });
 };
